@@ -1,0 +1,11 @@
+version: '2'
+services:
+  postgres:
+    image: postgres
+  nginx:
+    build: .
+    links:
+      - postgres
+    ports:
+      - "80:80"
+
